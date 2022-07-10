@@ -123,3 +123,40 @@ https://www.w3resource.com/csharp-exercises/array/index.php#editorr
             }
             Console.WriteLine();
             Console.Read();
+            
+13.
+            Console.Write("Input the number of elements in the array: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("Input " + n + " number of elements in the first array: ");
+            int[] a = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                a[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine();
+            Array.Sort(a);
+            Console.Write("Input the value to be inserted : ");
+            int n1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Console.Write("The existing array list is : ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(a[i] + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+            int[] a1 = new int[n + 1];
+            for (int i = 0; i < a1.Length-1; i++)
+            {
+                a1[i] = a[i];
+            }
+            a1[n] = n1;
+            Array.Sort(a1);
+            Console.Write("After Insert the list is : ");
+            for (int i = 0; i < a1.Length; i++)
+            {
+                Console.Write(a1[i] + " ");
+            }
+            Console.WriteLine();
+            Console.Read();
