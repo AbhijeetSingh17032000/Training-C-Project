@@ -1,7 +1,7 @@
 https://www.w3resource.com/csharp-exercises/array/index.php#editorr
 
 4.
-Console.Write("Input the number of elements in the array: ");
+            Console.Write("Input the number of elements in the array: ");
             int n = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
             Console.WriteLine("Input " + n + " number of elements in the array: ");
@@ -30,7 +30,7 @@ Console.Write("Input the number of elements in the array: ");
             Console.Read();
 
 7. 
-Console.Write("Input the number of elements in the array: ");
+            Console.Write("Input the number of elements in the array: ");
             int n = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
             Console.WriteLine("Input " + n + " number of elements in the first array: ");
@@ -64,4 +64,22 @@ Console.Write("Input the number of elements in the array: ");
                 Console.Write(b[i]+" ");
             }
             Console.WriteLine();
+            Console.Read();
+            
+9.
+            Console.Write("Input the number of elements in the array: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("Input " + n + " number of elements in the first array: ");
+            int[] a = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                a[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine();
+            Array.Sort(a);
+            Console.Write("Maximum element is : ");
+            Console.WriteLine(a[n-1]);
+            Console.Write("Minimum element is : ");
+            Console.WriteLine(a[0]);
             Console.Read();
