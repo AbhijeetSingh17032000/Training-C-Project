@@ -29,7 +29,7 @@ Console.Write("Input the number of elements in the array: ");
             Console.WriteLine();
             Console.Read();
 
-5. 
+7. 
 Console.Write("Input the number of elements in the array: ");
             int n = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
