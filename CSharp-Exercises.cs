@@ -1,4 +1,4 @@
-https://www.w3resource.com/csharp-exercises/array/index.php#editorr
+// https://www.w3resource.com/csharp-exercises/array/index.php#editorr
 
 4.
             Console.Write("Input the number of elements in the array: ");
