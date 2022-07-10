@@ -1,5 +1,7 @@
 // https://www.w3resource.com/csharp-exercises/array/index.php#editorr
 
+// The following code needs to be written in the main method.
+
 4.
             Console.Write("Input the number of elements in the array: ");
             int n = Convert.ToInt32(Console.ReadLine());
