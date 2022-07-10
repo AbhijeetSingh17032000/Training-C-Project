@@ -1,0 +1,67 @@
+https://www.w3resource.com/csharp-exercises/array/index.php#editorr
+
+4.
+Console.Write("Input the number of elements in the array: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("Input " + n + " number of elements in the array: ");
+            string[] a = new string[n];
+            for (int i = 0; i < n; i++)
+            {
+                a[i] = Console.ReadLine();
+            }
+            string[] b = new string[n];
+            for (int i = 0; i < n; i++)
+            {
+                b[i] = a[i];
+            }
+            Console.Write("The elements stored in the first array: ");
+            for (int i = 0; i < a.Length; i++)
+            {
+                Console.Write(a[i]+" ");
+            }
+            Console.WriteLine();
+            Console.Write("The elements stored in the second array: ");
+            for (int i = 0; i < b.Length; i++)
+            {
+                Console.Write(b[i]+" ");
+            }
+            Console.WriteLine();
+            Console.Read();
+
+5. 
+Console.Write("Input the number of elements in the array: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("Input " + n + " number of elements in the first array: ");
+            int[] a = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                a[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine();
+            Console.WriteLine("Input " + n + " number of elements in the second array: ");
+            int[] a1 = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                a1[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int[] b = new int[n+n];
+            for (int i = 0; i < n; i++)
+            {
+                b[i] = a[i];
+            }
+            for (int i = n; i < (n+n); i++)
+            {
+                b[i] = a1[i - n];
+            }
+            Console.WriteLine();
+            Array.Sort(b);
+            Console.Write("The merged array in ascending order is: ");
+            for (int i = 0; i < b.Length; i++)
+            {
+                Console.Write(b[i]+" ");
+            }
+            Console.WriteLine();
+            Console.Read();
