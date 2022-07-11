@@ -1,0 +1,14 @@
+C:\Users\abhijeetsingh9\Downloads\DotNet Project\Testprojects\FoodCourtManagementSystem\FoodCourtManagementSystem\bin\Debug\netcoreapp3.1\FoodCourtManagementSystem.exe
+C:\Users\abhijeetsingh9\Downloads\DotNet Project\Testprojects\FoodCourtManagementSystem\FoodCourtManagementSystem\bin\Debug\netcoreapp3.1\FoodCourtManagementSystem.deps.json
+C:\Users\abhijeetsingh9\Downloads\DotNet Project\Testprojects\FoodCourtManagementSystem\FoodCourtManagementSystem\bin\Debug\netcoreapp3.1\FoodCourtManagementSystem.runtimeconfig.json
+C:\Users\abhijeetsingh9\Downloads\DotNet Project\Testprojects\FoodCourtManagementSystem\FoodCourtManagementSystem\bin\Debug\netcoreapp3.1\FoodCourtManagementSystem.runtimeconfig.dev.json
+C:\Users\abhijeetsingh9\Downloads\DotNet Project\Testprojects\FoodCourtManagementSystem\FoodCourtManagementSystem\bin\Debug\netcoreapp3.1\FoodCourtManagementSystem.dll
+C:\Users\abhijeetsingh9\Downloads\DotNet Project\Testprojects\FoodCourtManagementSystem\FoodCourtManagementSystem\bin\Debug\netcoreapp3.1\FoodCourtManagementSystem.pdb
+C:\Users\abhijeetsingh9\Downloads\DotNet Project\Testprojects\FoodCourtManagementSystem\FoodCourtManagementSystem\obj\Debug\netcoreapp3.1\FoodCourtManagementSystem.csproj.AssemblyReference.cache
+C:\Users\abhijeetsingh9\Downloads\DotNet Project\Testprojects\FoodCourtManagementSystem\FoodCourtManagementSystem\obj\Debug\netcoreapp3.1\FoodCourtManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abhijeetsingh9\Downloads\DotNet Project\Testprojects\FoodCourtManagementSystem\FoodCourtManagementSystem\obj\Debug\netcoreapp3.1\FoodCourtManagementSystem.AssemblyInfoInputs.cache
+C:\Users\abhijeetsingh9\Downloads\DotNet Project\Testprojects\FoodCourtManagementSystem\FoodCourtManagementSystem\obj\Debug\netcoreapp3.1\FoodCourtManagementSystem.AssemblyInfo.cs
+C:\Users\abhijeetsingh9\Downloads\DotNet Project\Testprojects\FoodCourtManagementSystem\FoodCourtManagementSystem\obj\Debug\netcoreapp3.1\FoodCourtManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\abhijeetsingh9\Downloads\DotNet Project\Testprojects\FoodCourtManagementSystem\FoodCourtManagementSystem\obj\Debug\netcoreapp3.1\FoodCourtManagementSystem.dll
+C:\Users\abhijeetsingh9\Downloads\DotNet Project\Testprojects\FoodCourtManagementSystem\FoodCourtManagementSystem\obj\Debug\netcoreapp3.1\FoodCourtManagementSystem.pdb
+C:\Users\abhijeetsingh9\Downloads\DotNet Project\Testprojects\FoodCourtManagementSystem\FoodCourtManagementSystem\obj\Debug\netcoreapp3.1\FoodCourtManagementSystem.genruntimeconfig.cache
