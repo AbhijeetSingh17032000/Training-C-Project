@@ -1,4 +1,4 @@
-[1., 2., 3.] - (Same questions solved in Linq HandsOn 2nd(12th July 2022))
+[1., 2., 3.] - (Same questions solved in Linq HandsOn 1st(12th July 2022))
 
 4.
 using System;
@@ -162,5 +162,4 @@ namespace LINQ_HandsOn
     }
 }
 
-
-
+[4.] - (Same questions solved in Linq HandsOn 1st(12th July 2022))
