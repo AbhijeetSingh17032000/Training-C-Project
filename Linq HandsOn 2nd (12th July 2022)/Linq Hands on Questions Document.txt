@@ -1,0 +1,111 @@
+Linq Hands On:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Program
+{
+	public static void Main()
+	{
+		var people = new List<Person>()
+		{
+			new Person("Bill", "Smith", 41),
+			new Person("Sarah", "Jones", 22),
+			new Person("Stacy","Baker", 21),
+			new Person("Vivianne","Dexter", 19 ),
+			new Person("Bob","Smith", 49 ),
+			new Person("Brett","Baker", 51 ),
+			new Person("Mark","Parker", 19),
+			new Person("Alice","Thompson", 18),
+			new Person("Evelyn","Thompson", 58 ),
+			new Person("Mort","Martin", 58),
+			new Person("Eugene","deLauter", 84 ),
+			new Person("Gail","Dawson", 19 ),
+			
+		};
+		
+			}
+	
+	public class Person
+	{
+		public Person(string firstName, string lastName, int age)
+		{
+			FirstName = firstName;
+			LastName = lastName;
+			Age = age;
+		}
+		
+		public string FirstName {get;set;}
+		public string LastName {get;set;}
+		public int Age {get;set;}
+		
+		//override ToString to return the person's FirstName LastName Age
+	}
+}
+
+
+
+Questions:
+1.	//write linq statement for people with last name that starts with the letter D
+2.	//write a linq statement for people with last names that starts with the letter D and displays the count.		
+3.	//Write linq statement for first Person Older Than 40 In Descending Alphabetical Order By First Name
+4.	//write linq statement for people’s full name(concat firstname and last name)
+
+
+
+
+
+1.	Most frequent character
+Write a query that returns most frequent character in string. Assume that there is only one such character.
+Expected input and output
+"panda"  → 'a'
+"n093nfv034nie9"→ 'n'
+2.	Find out Unique values
+Given a non-empty list of strings, return a list that contains only unique (non-duplicate) strings.
+Expected input and output
+["abc", "xyz", "klm", "xyz", "abc", "abc", "rst"] → ["klm", "rst"]
+
+3.	Top 5 numbers
+Write a query that returns top 5 numbers from the list of integers in descending order.
+Expected input and output
+[78, -9, 0, 23, 54,  21, 7, 86]  → 86 78 54 23 21
+4.	// Find the words in the collection that start with the letter 'L'
+List<string> fruits = new List<string>() { "Lemon", "Apple", "Orange", "Lime", "Watermelon", "Loganberry" };
+5.	// Which of the following numbers are multiples of 4 or 6
+           List<int> mixedNumbers = new List<int>()
+            {
+                15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+            };
+6.	// Output how many numbers are in this list
+            List<int> numbers = new List<int>()
+            {
+                15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+            };
+7.	// How much money have we made?
+          List<double> purchases = new List<double>()
+          {
+                2340.29, 745.31, 21.76, 34.03, 4786.45, 879.45, 9442.85, 2454.63, 45.65
+            };
+8.	// What is our most expensive product?
+            List<double> prices = new List<double>()
+            {
+                879.45, 9442.85, 2454.63, 45.65, 2340.29, 34.03, 4786.45, 745.31, 21.76
+            };
+9.	Given the same customer set, display how many millionaires per bank
+List<Customer> customers = new List<Customer>() {
+                new Customer(){ Name="Bob Lesman", Balance=80345.66, Bank="FTB"},
+                new Customer(){ Name="Joe Landy", Balance=9284756.21, Bank="WF"},
+                new Customer(){ Name="Meg Ford", Balance=487233.01, Bank="BOA"},
+                new Customer(){ Name="Peg Vale", Balance=7001449.92, Bank="BOA"},
+                new Customer(){ Name="Mike Johnson", Balance=790872.12, Bank="WF"},
+                new Customer(){ Name="Les Paul", Balance=8374892.54, Bank="WF"},
+                new Customer(){ Name="Sid Crosby", Balance=957436.39, Bank="FTB"},
+                new Customer(){ Name="Sarah Ng", Balance=56562389.85, Bank="FTB"},
+                new Customer(){ Name="Tina Fey", Balance=1000000.00, Bank="CITI"},
+                new Customer(){ Name="Sid Brown", Balance=49582.68, Bank="CITI"}
+            };
+10.	Display Top 3 customers per bank.
+
+		
+
