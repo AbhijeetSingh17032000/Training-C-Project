@@ -136,3 +136,84 @@ static void Main(string[] args)
         }
 
 6.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LINQ_HandsOn
+{
+    public class Students
+    {
+        public int StuId { get; set; }
+        public string StuName { get; set; }
+        public int GrPoint { get; set; }
+        public static void ShowStudentDetails()
+        {
+            List<Students> stulist = new List<Students>();
+            stulist.Add(new Students { StuId = 1, StuName = " Joseph ", GrPoint = 800 });
+            stulist.Add(new Students { StuId = 2, StuName = "Alex", GrPoint = 458 });
+            stulist.Add(new Students { StuId = 3, StuName = "Harris", GrPoint = 900 });
+            stulist.Add(new Students { StuId = 4, StuName = "Taylor", GrPoint = 900 });
+            stulist.Add(new Students { StuId = 5, StuName = "Smith", GrPoint = 458 });
+            stulist.Add(new Students { StuId = 6, StuName = "Natasa", GrPoint = 700 });
+            stulist.Add(new Students { StuId = 7, StuName = "David", GrPoint = 750 });
+            stulist.Add(new Students { StuId = 8, StuName = "Harry", GrPoint = 700 });
+            stulist.Add(new Students { StuId = 9, StuName = "Nicolash", GrPoint = 597 });
+            stulist.Add(new Students { StuId = 10, StuName = "Jenny", GrPoint = 750 });
+
+            Console.WriteLine("Which maximum grade point(1st, 2nd, 3rd, ...) you want to find  :");
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            var result = (from TableName in stulist
+                         orderby TableName.GrPoint descending 
+                         select new Students()
+                         {
+                            GrPoint = TableName.GrPoint,
+                         }).Distinct().ToList();
+            
+            var b = result[a];
+            
+            var result2 = from TableName in stulist
+                          where TableName.GrPoint == Convert.ToInt32(b.GrPoint)
+                         select TableName;
+
+
+            foreach (var item in result2)
+            {
+                Console.WriteLine("StuId : "+item.StuId);
+                Console.WriteLine("StuName : " + item.StuName);
+                Console.WriteLine("StuGrPoint : " + item.GrPoint);
+                Console.WriteLine();
+            }
+
+        }
+    }
+
+    internal class Linq
+    {
+
+    }
+}
+
+// Main Function
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LINQ_HandsOn
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Students.ShowStudentDetails();
+
+            Console.Read();
+        }
+    }
+}
