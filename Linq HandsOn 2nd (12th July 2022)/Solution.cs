@@ -71,5 +71,48 @@ namespace LINQ_HandsOn
     }
 }
 
-5.
+3. Top 5 numbers
+// Main Function
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LINQ_HandsOn
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.Write("How many records you want to enter? ");
+            Console.WriteLine();
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            int[] b = new int[a];
+
+            for (int i = 0; i < a; i++)
+            {
+                Console.WriteLine("Enter " + (i + 1) + " record :");
+                b[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            var result = (from studentData in b
+
+                          orderby studentData descending
+                          select studentData
+                          ).Take(5);
+            Console.WriteLine("The top 5"+" numbers from the list are :");
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.Read();
+        }
+    }
+}
+
+
 
