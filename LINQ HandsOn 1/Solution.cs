@@ -449,3 +449,30 @@ namespace LINQ_HandsOn
 }
 
 10.
+// Main Function
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LINQ_HandsOn
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> fruits = new List<string>() { "Lemon", "Apple", "Orange", "Lime", "Watermelon", "Loganberry" };
+            var result = from TableName in fruits
+                         where TableName.StartsWith("L")
+                         select TableName;
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+            Console.Read();
+        }
+    }
+}
+
+11.
