@@ -163,3 +163,37 @@ namespace LINQ_HandsOn
 }
 
 [4., 5.] - (Same questions solved in Linq HandsOn 1st(12th July 2022))
+
+8. What is our most expensive product?
+// Main Function
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LINQ_HandsOn
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            List<double> prices = new List<double>()
+            {
+                879.45, 9442.85, 2454.63, 45.65, 2340.29, 34.03, 4786.45, 745.31, 21.76
+            };
+
+            var result = (from TableName in prices 
+                          orderby TableName descending
+                          select TableName).Take(1).ToList();
+
+            foreach (var item in result)
+            {
+                Console.WriteLine("Most Expensive Product: " + item);
+            }
+
+            Console.Read();
+        }
+    }
+}
