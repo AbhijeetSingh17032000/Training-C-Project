@@ -162,4 +162,4 @@ namespace LINQ_HandsOn
     }
 }
 
-[4.] - (Same questions solved in Linq HandsOn 1st(12th July 2022))
+[4., 5.] - (Same questions solved in Linq HandsOn 1st(12th July 2022))
