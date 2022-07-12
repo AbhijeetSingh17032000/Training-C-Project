@@ -476,3 +476,32 @@ namespace LINQ_HandsOn
 }
 
 11.
+// Main Function
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LINQ_HandsOn
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> mixedNumbers = new List<int>()
+            {
+                15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+            };
+            var result = from TableName in mixedNumbers
+                         where (TableName%4==0) || (TableName%6==0)
+                         select TableName;
+            Console.WriteLine("The following numbers are multiples of 4 or 6");
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+            Console.Read();
+        }
+    }
+}
