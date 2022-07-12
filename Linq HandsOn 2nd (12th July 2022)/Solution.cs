@@ -163,6 +163,34 @@ namespace LINQ_HandsOn
 }
 
 [4., 5.] - (Same questions solved in Linq HandsOn 1st(12th July 2022))
+    
+6. Output how many numbers are in this list?
+// Main Function
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LINQ_HandsOn
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            List<int> numbers = new List<int>()
+            {
+                15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+            };
+
+            var result = (from TableName in numbers select TableName).Count();
+            Console.WriteLine(result+ " numbers are in the given list.");
+            
+            Console.Read();
+        }
+    }
+}
 
 8. What is our most expensive product?
 // Main Function
