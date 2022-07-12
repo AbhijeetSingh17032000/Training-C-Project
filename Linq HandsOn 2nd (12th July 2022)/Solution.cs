@@ -192,6 +192,34 @@ namespace LINQ_HandsOn
     }
 }
 
+7. How much money have we made?
+// Main Function
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LINQ_HandsOn
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            List<double> purchases = new List<double>()
+            {
+                2340.29, 745.31, 21.76, 34.03, 4786.45, 879.45, 9442.85, 2454.63, 45.65
+            };
+            var result = (from TableName in  purchases
+                         select TableName).Sum();
+            Console.WriteLine(result);
+
+            Console.Read();
+        }
+    }
+}
+
 8. What is our most expensive product?
 // Main Function
 using System;
