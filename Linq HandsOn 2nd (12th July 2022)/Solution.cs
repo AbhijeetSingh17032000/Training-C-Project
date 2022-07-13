@@ -286,3 +286,151 @@ namespace LINQ_HandsOn
         }
     }
 }
+
+9.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LINQ_HandsOn
+{
+    public class Customer
+    {
+        public string Name { get; set; }
+        public string Bank { get; set; }
+        public double Balance { get; set; }
+        public static void HandsOn2_9()
+        {
+            List<Customer> customers = new List<Customer>() {
+                new Customer(){ Name="Bob Lesman", Balance=80345.66, Bank="FTB"},
+                new Customer(){ Name="Joe Landy", Balance=9284756.21, Bank="WF"},
+                new Customer(){ Name="Meg Ford", Balance=487233.01, Bank="BOA"},
+                new Customer(){ Name="Peg Vale", Balance=7001449.92, Bank="BOA"},
+                new Customer(){ Name="Mike Johnson", Balance=790872.12, Bank="WF"},
+                new Customer(){ Name="Les Paul", Balance=8374892.54, Bank="WF"},
+                new Customer(){ Name="Sid Crosby", Balance=957436.39, Bank="FTB"},
+                new Customer(){ Name="Sarah Ng", Balance=56562389.85, Bank="FTB"},
+                new Customer(){ Name="Tina Fey", Balance=1000000.00, Bank="CITI"},
+                new Customer(){ Name="Sid Brown", Balance=49582.68, Bank="CITI"}
+            };
+
+            var result = from a in customers
+                         where a.Balance > 1000000
+                         group a by a.Bank into a
+                         select a;
+
+            foreach (var Cust in result)
+            {
+                Console.WriteLine("Number of millionare in " + Cust.Key + " : " + Cust.Count());
+
+                foreach (var c in Cust)
+                {
+                    Console.WriteLine(c.Name+"\t"+c.Balance + "\t" +c.Bank);
+                }
+                Console.WriteLine();
+            }
+
+        }
+    }
+}
+
+// Main Function
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LINQ_HandsOn
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Customer.HandsOn2_9();
+
+            Console.Read();
+        }
+    }
+}
+
+10.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LINQ_HandsOn
+{
+    public class Customer
+    {
+        public string Name { get; set; }
+        public string Bank { get; set; }
+        public double Balance { get; set; }
+        public static void HandsOn2_9()
+        {
+            List<Customer> customers = new List<Customer>() {
+                new Customer(){ Name="Bob Lesman", Balance=80345.66, Bank="FTB"},
+                new Customer(){ Name="Joe Landy", Balance=9284756.21, Bank="WF"},
+                new Customer(){ Name="Meg Ford", Balance=487233.01, Bank="BOA"},
+                new Customer(){ Name="Peg Vale", Balance=7001449.92, Bank="BOA"},
+                new Customer(){ Name="Mike Johnson", Balance=790872.12, Bank="WF"},
+                new Customer(){ Name="Les Paul", Balance=8374892.54, Bank="WF"},
+                new Customer(){ Name="Sid Crosby", Balance=957436.39, Bank="FTB"},
+                new Customer(){ Name="Sarah Ng", Balance=56562389.85, Bank="FTB"},
+                new Customer(){ Name="Tina Fey", Balance=1000000.00, Bank="CITI"},
+                new Customer(){ Name="Sid Brown", Balance=49582.68, Bank="CITI"}
+            };
+
+            var result = (from a in customers
+                          group a by a.Bank into b
+                          orderby b.Key descending
+                          select new
+                          {
+                              Bank = b.Key,
+                              Balance = b.OrderByDescending(obj => obj.Balance),                             
+                          });
+
+            Console.WriteLine("Enter How Many Records You Want To Display?");
+            int records = Convert.ToInt32(Console.ReadLine());
+
+            foreach (var group in result)
+            {
+                Console.WriteLine(group.Bank + " : " + group.Balance.Count());
+                int i = 0;               
+                    foreach (var student in group.Balance)
+                    {
+                        i++;
+                        Console.WriteLine("  Name :" + student.Name + ", Age: " + student.Balance + ", Branch :" + student.Bank);
+                        if(i==records)
+                        break;
+                    }           
+            }
+        }
+    }
+}
+
+// Main Function
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LINQ_HandsOn
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Customer.HandsOn2_9();
+
+            Console.Read();
+        }
+    }
+}
