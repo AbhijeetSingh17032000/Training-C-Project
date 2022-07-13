@@ -71,6 +71,39 @@ namespace LINQ_HandsOn
     }
 }
 
+1. Most frequent character
+// Main Function
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LINQ_HandsOn
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Enter the word ");
+            string inp = Console.ReadLine();
+
+            var result = (from a in inp
+                          group a by a into a
+                          orderby a.Count() descending
+                          select a).Take(1);
+
+            foreach (var n in result)
+            {
+                Console.WriteLine("Most frequent character in string is : " + n.Key);
+            }
+
+            Console.Read();
+        }
+    }
+}
+
 2. Find out Unique values
 //Main Function
 using System;
