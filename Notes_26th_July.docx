@@ -46,7 +46,7 @@ Sending data from controller to view there are multiple ways. One of which is us
 ViewBag works on the principle of dynamic variable. name of the dynamic variable is in our hand. (It stores data of the return of the method)
 
 In the .html file
-@ - signifies compiler to be called.
+@ - signifies compiler to be called. (Razor Syntax)
 
 Guid - Internal structure like int (a globally unique identifier)
 
@@ -63,4 +63,12 @@ Controller Actions (ViewBag Also)
   |
 View
   |
-End
+ End
+
+MVC Application - Usually we use AddControllersWithViews
+WEB API - Usually we use AddController
+
+IN A WEBSITE/WEBPAGE
+Standard Template - Called Master
+The content which changes is called - Content
+
