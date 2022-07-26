@@ -1,0 +1,66 @@
+ADO .Net
+Uses a provider model 
+
+Object linking and embedding (OLEDB) – provider for MS Word / Excel
+Oracle Client Provider – Oracle
+SQL Client Provider – SQL Server (System.Data.SqlClient – Has prefix as SQL)
+Open Database Connectivity (ODBC) - Other Servers
+
+DataTable, DataRow, DataColoum comes under System.Data
+When writing oracle connection class – We will use System.Data.OracleClient
+
+In SQL
+Windows Authentication 
+Mixed Authentication 
+SQL Server Authentication 
+
+In SQL Server (Northwind -> Programmability -> Stored Procedures -> TenMostExpensiveProducts)
+GO - (used to go to the server) 
+[dbo] – Default schema name
+
+Write writing SQL Connection in .Net
+In case of writing min, max, count kind off thing – We have to write execute scalar
+In case of writing Select query – We have to write execute Reader
+In case of writing Insert, Update or Delete – We have to write execute non query
+
+Dependency Injection (DI)
+Goes hand in hand with Inversion of Control (IOC) – is responsible for automatic DI in .NET Core (Whether MVC or Web API)
+If we have a interface, (it doesn’t have implemented method, it just has declaration of method)
+Removing the dependency of interface on class – Loose coupling
+
+Lifetime of Service
+1.	Singleton – Single object any number of times you call the service. (across users & applications same scene)
+2.	Scoped – Once per user & shared across request. (Never use scoped for sensitive info)
+3.	Transient – Once per request, new object will be created. (Use transient for sensitive info, new cookie is generated everytime.)
+
+STEPS for Service Lifetime Demo/DI
+1. Create class & Interface
+2. Register Service - In StartUp.cs
+3. use the service/Call the service 
+    HOW?
+    a. By going to the controller
+    b. Create a Constructor of the controller (edit if its already exisiting) -- paramaeter added in the constructor & assigned to a private variable of type interface
+    c. Call the mrthod on the object
+    
+Sending data from controller to view there are multiple ways. One of which is using VIEWBAG (It can store object type of data). 
+ViewBag works on the principle of dynamic variable. name of the dynamic variable is in our hand. (It stores data of the return of the method)
+
+In the .html file
+@ - signifies compiler to be called.
+
+Guid - Internal structure like int (a globally unique identifier)
+
+
+Start
+  |
+Interface & Classes
+  |
+Startup/Configure Services
+  |
+Controller
+  |
+Controller Actions (ViewBag Also)
+  |
+View
+  |
+End
