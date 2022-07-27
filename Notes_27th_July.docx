@@ -1,0 +1,18 @@
+STATE MANAGEMENT
+http - Stateless Protocol
+
+The different state management techniques are:-
+1. Server Side State management techniques
+  a. ViewBag
+  b. ViewData
+  c. TempData
+  d. Session
+  e. Application
+2. Client Side State management techniques 
+  a. Cookies (We can store single as well as multiple values in a cookie) [httpcookie used here]
+    1. Temporary Cookie - YOur data is stored as long as you are assosiacted with the application/website
+    2. Persistant Cookie - it can persisit till a particular period of time (milliseconds to seconds, hrs, etc)
+    - Expiration policy for the cookie needs to be specified all the time.
+    - Object and cookie names are different. Details to be stored in the cookie after creating object needs to be specified in brackets.
+  b. Query Strings
+  c. Hidden Fields
